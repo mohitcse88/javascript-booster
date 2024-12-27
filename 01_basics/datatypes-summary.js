@@ -46,7 +46,37 @@ const greet = function(){
 }
 
 
-console.log(typeof user);
+// console.log(typeof user);
 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// +++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Primitive), Heap(Non-Primitive)
+
+// Stack(Primitive) : When stack memory use then we get copy of variable
+
+// Heap(Non-Primitive) : When Heap memory use then we get reference of original value
+
+let myCity = "Phagwara"
+
+let myAnotherCity = myCity
+myAnotherCity = "Motihari"
+
+// console.log(myCity);
+// console.log(myAnotherCity);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "mohit@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
